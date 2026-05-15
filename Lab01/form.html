@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Реєстрація на курс</title>
+</head>
+<body>
+
+  <h1>
+Реєстрація на курс
+</h1>
+
+  <form action="#" method="post">
+
+    <fieldset>
+      <legend> 
+    Особисті дані
+     </legend>
+
+      <p>
+        <label for="firstName">Ім’я</label><br>
+        <input 
+          id="firstName" 
+          name="firstName" 
+          type="text" 
+          required 
+          minlength="2"
+          placeholder="Наприклад: Кристина"
+        >
+      </p>
+
+      <p>
+        <label for="lastName">Прізвище</label><br>
+        <input 
+          id="lastName" 
+          name="lastName" 
+          type="text" 
+          required 
+          minlength="2"
+          placeholder="Наприклад: Попкова"
+        >
+      </p>
+
+      <p>
+        <label for="birthDate">Дата народження</label><br>
+        <input 
+          id="birthDate" 
+          name="birthDate" 
+          type="date" 
+          required
+        >
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+     Дані для входу
+     </legend>
+
+      <p>
+        <label for="email">Електронна пошта</label><br>
+        <input 
+          id="email" 
+          name="email" 
+          type="email" 
+          required
+          placeholder="example@gmail.com"
+        >
+      </p>
+
+      <p>
+        <label for="password">Пароль</label><br>
+        <input 
+          id="password" 
+          name="password" 
+          type="password" 
+          required 
+          minlength="6"
+          placeholder="Мінімум 6 символів"
+        >
+      </p>
+
+      <p>
+        <label for="confirmPassword">Підтвердження пароля</label><br>
+        <input 
+          id="confirmPassword" 
+          name="confirmPassword" 
+          type="password" 
+          required 
+          minlength="6"
+          placeholder="Повторіть пароль"
+        >
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Навчальна інформація</legend>
+
+      <p>
+        <label for="specialty">Спеціальність</label><br>
+        <select id="specialty" name="specialty" required>
+          <option value="">Оберіть спеціальність</option>
+          <option value="cybersecurity">Кібербезпека</option>
+          <option value="computer-science">Комп’ютерні науки</option>
+          <option value="software-engineering">Інженерія програмного забезпечення</option>
+          <option value="applied-math">Прикладна математика</option>
+        </select>
+      </p>
+
+      <p>
+        <input 
+          id="rules" 
+          name="rules" 
+          type="checkbox" 
+          required
+        >
+        <label for="rules">Я погоджуюся з правилами курсу</label>
+      </p>
+    </fieldset>
+
+    <p>
+      <button type="submit">Зареєструватися</button>
+    </p>
+
+  </form>
+
+</body>
+</html>

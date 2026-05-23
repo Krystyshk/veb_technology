@@ -1,4 +1,3 @@
-/* ========== RESET ========== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -8,7 +7,6 @@ body {
   padding: 24px;
 }
 
-/* ========== LAYOUT ========== */
 .app-wrapper {
   display: grid;
   grid-template-columns: 1fr 280px;
@@ -21,7 +19,6 @@ body {
   .app-wrapper { grid-template-columns: 1fr; }
 }
 
-/* ========== CARD ========== */
 .card {
   background: #fff;
   border-radius: 12px;
@@ -29,7 +26,6 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* ========== ADD ROW ========== */
 .add-row {
   display: flex;
   gap: 10px;
@@ -46,7 +42,6 @@ body {
   outline: none;
 }
 
-/* ========== BUTTONS ========== */
 .btn {
   position: relative;
   border: none;
@@ -87,7 +82,6 @@ body {
   font-size: 13px;
 }
 
-/* ========== QUANTITY ========== */
 .btn-qty {
   width: 30px;
   height: 30px;
@@ -106,7 +100,6 @@ body {
 .btn-qty.minus.disabled { background: #fca5a5; cursor: not-allowed; }
 .btn-qty.plus  { background: #22c55e; color: #fff; }
 
-/* ========== ITEM ROW ========== */
 .item-row {
   display: flex;
   align-items: center;
@@ -153,7 +146,6 @@ body {
   padding: 2px 6px;
 }
 
-/* ========== SUMMARY ========== */
 .summary-section { margin-bottom: 16px; }
 .summary-section h3 {
   font-size: 16px;
@@ -168,7 +160,6 @@ body {
   gap: 6px;
 }
 
-/* ========== ЗАГОТОВКА ========== */
 .product-item {
   background-color: #f3f4f6;
   display: inline-flex;
@@ -199,7 +190,6 @@ body {
   line-height: 20px;
 }
 
-/* ========== TOOLTIP ========== */
 [data-tooltip] { position: relative; }
 
 [data-tooltip]::after {
@@ -227,7 +217,6 @@ body {
   transform: translateX(-50%) scaleY(1);
 }
 
-/* ========== BADGE ========== */
 .badge {
   position: fixed;
   bottom: 0;
@@ -264,7 +253,6 @@ body {
   transform: translateY(0);
 }
 
-/* ========== PRINT ========== */
 @media print {
   body { background: #fff; padding: 0; }
   .app-wrapper { grid-template-columns: 1fr; }

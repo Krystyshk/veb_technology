@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>П'ятнашки WebDataRocks</title>
+
+    <link rel="stylesheet" href="https://cdn.webdatarocks.com/latest/webdatarocks.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game">
+    <h1>Гра “П'ятнашки”</h1>
+
+    <p class="description">
+        Основне поле гри створене через таблицю WebDataRocks.
+        Натисни на плитку біля порожньої клітинки, щоб зробити хід.
+    </p>
+
+    <div class="buttons">
+        <button onclick="newGame()">Нова гра</button>
+        <button onclick="shuffleGame()">Перемішати</button>
+        <button onclick="showHint()">Підказка</button>
+    </div>
+
+    <div class="info">
+        <span>Ходи: <b id="moves">0</b></span>
+        <span>Стан: <b id="status">Гра триває</b></span>
+    </div>
+
+    <div class="board-frame">
+        <div id="wdr-component"></div>
+    </div>
+</div>
+
+<script src="https://cdn.webdatarocks.com/latest/webdatarocks.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

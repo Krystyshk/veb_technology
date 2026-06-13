@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking-форма · Flatpickr</title>
+
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> <!-- підключає стилі для календаря Flatpickr -->
+ <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> <!-- підключає JavaScript для календаря Flatpickr -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/uk.js"></script> <!-- підключає українську локалізацію для календаря Flatpickr -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="booking-card">
+    <h1>Бронювання житла</h1>
+    <p class="subtitle">Оберіть дати заїзду та виїзду для апартаментів у Львові</p>
+
+    <form class="booking-form">
+      <div class="form-group">
+        <label for="checkin">Заїзд</label>
+        <input type="text" id="checkin" placeholder="Оберіть дату заїзду">
+      </div>
+
+      <div class="form-group">
+        <label for="checkout">Виїзд</label>
+        <input type="text" id="checkout" placeholder="Оберіть дату виїзду">
+      </div>
+    </form>
+
+    <div class="info-box">
+      <h2>Апартаменти “Затишок”</h2>
+      <p>Місто: Львів</p>
+      <p>Ціна за ніч: <strong>1500 грн</strong></p>
+    </div>
+
+    <div id="result" class="result">
+      Тривалість: 0 ночей, ціна: 0 грн
+    </div>
+
+    <div class="busy-dates">
+      <h3>Зайняті дати:</h3>
+      <ul>
+        <li>2026-06-10</li>
+        <li>2026-06-14</li>
+        <li>2026-06-18</li>
+        <li>2026-06-22</li>
+        <li>2026-06-27</li>
+        <li>2026-07-02</li>
+      </ul>
+    </div>
+  </div>
+
+ 
+  <script src="script.js"></script>
+</body>
+</html>

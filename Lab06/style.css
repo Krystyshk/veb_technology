@@ -1,0 +1,124 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body { 
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ede7f6, #fff8e1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.booking-card {
+  width: 100%;
+  max-width: 620px;
+  background: #ffffff;
+  border: 2px solid #6a1b9a;
+  border-radius: 22px;
+  padding: 32px;
+  box-shadow: 0 12px 30px rgba(74, 20, 140, 0.18);
+}
+
+h1 { 
+  margin: 0;
+  color: #4a148c;
+  text-align: center;
+  font-size: 32px;
+}
+
+.subtitle { 
+  text-align: center;
+  color: #555;
+  margin: 10px 0 28px;
+}
+
+.booking-form { 
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.form-group { 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label { 
+  margin-bottom: 8px;
+  color: #4a148c;
+  font-weight: bold;
+}
+
+input { 
+  padding: 13px 14px;
+  border: 1px solid #c7b6d8;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus { 
+  border-color: #6a1b9a;
+  box-shadow: 0 0 0 3px rgba(106, 27, 154, 0.15);
+}
+
+.info-box {
+  background: #f7f1ff;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
+.info-box h2 {
+  margin: 0 0 8px;
+  color: #4a148c;
+}
+
+.info-box p { 
+  margin: 6px 0;
+  color: #333;
+}
+
+.result {
+  background: #6a1b9a;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.busy-dates {
+  border-top: 1px solid #ddd;
+  padding-top: 14px;
+}
+
+.busy-dates h3 {
+  margin: 0 0 8px;
+  color: #4a148c;
+}
+
+.busy-dates ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #555;
+  columns: 2;
+}
+
+@media (max-width: 600px) {
+  .booking-form {
+    flex-direction: column;
+  }
+
+  .busy-dates ul {
+    columns: 1;
+  }
+}

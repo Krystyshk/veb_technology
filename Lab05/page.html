@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2 — GitHub-агрегатор</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 2rem auto; padding: 1rem; line-height: 1.5; }
+    h1 { color: #2050a0; }
+    .form { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+    #username { flex: 1; padding: 8px 12px; border: 1px solid #ccd; border-radius: 6px; font-size: 1rem; }
+    #load { padding: 10px 20px; background: #2050a0; color: white; border: none; border-radius: 6px; cursor: pointer; }
+    #load:disabled { opacity: 0.6; cursor: wait; }
+
+    #result { padding: 1rem; background: #f6f8fa; border-radius: 8px; min-height: 80px; }
+    .profile { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+    .profile img { width: 80px; height: 80px; border-radius: 50%; }
+    .profile h2 { margin: 0; }
+    .profile p { margin: 4px 0 0; color: #555; }
+
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin: 1rem 0; }
+    .stat { padding: 0.5rem; background: white; border-radius: 6px; text-align: center; }
+    .stat .label { font-size: 0.8em; color: #666; }
+    .stat .value { font-size: 1.3rem; font-weight: 700; color: #2050a0; }
+
+    .top-repos { margin-top: 1rem; }
+    .top-repos h3 { margin: 0 0 0.5rem; }
+    .repo { padding: 0.5rem; background: white; border-radius: 6px; margin-bottom: 0.5rem; }
+    .repo .name { font-weight: 600; color: #2050a0; }
+    .repo .desc { font-size: 0.9em; color: #555; margin: 4px 0; }
+    .repo .stars { font-size: 0.85em; color: #888; }
+
+    .error { color: #c33; }
+    .status { color: #888; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <h1>GitHub-агрегатор</h1>
+
+  <div class="form">
+    <input id="username" type="text" placeholder="GitHub username (наприклад, torvalds)" autofocus>
+    <button id="load">Завантажити</button>
+  </div>
+
+  <div id="result">
+    <p class="status">Введіть username і натисніть кнопку...</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

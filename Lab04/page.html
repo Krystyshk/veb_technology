@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2 — Лічильник з історією</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; max-width: 560px; margin: 2rem auto; padding: 1rem; line-height: 1.5; }
+    h1 { color: #2050a0; }
+    #counters { display: flex; flex-direction: column; gap: 0.5rem; }
+    .counter {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .counter.is-leader { background: #fff7e6; border-color: #b85c00; }
+    .counter .label { flex: 1; font-weight: 600; }
+    .counter .value { min-width: 2em; text-align: center; font-size: 1.2rem; font-variant-numeric: tabular-nums; }
+    .counter button {
+      width: 32px; height: 32px;
+      background: #2050a0; color: white;
+      border: none; border-radius: 4px;
+      cursor: pointer; font-size: 1.1rem;
+    }
+    .counter button:disabled { opacity: 0.4; cursor: not-allowed; }
+    .panel { margin: 1.5rem 0; padding: 1rem; background: #f6f8fa; border-radius: 6px; }
+    .panel p { margin: 0.4rem 0; }
+    .panel button {
+      padding: 6px 12px; margin-right: 6px;
+      background: white; border: 1px solid #ccd; border-radius: 4px; cursor: pointer;
+    }
+    .panel button#reset { color: #c33; border-color: #c33; }
+    #history { list-style: none; padding-left: 0; font-size: 0.9rem; color: #666; }
+    #history li { padding: 2px 0; }
+  </style>
+</head>
+<body>
+
+  <h1>Скільки сьогодні випили</h1>
+
+  <div id="counters">
+    <div class="counter" data-name="кави">
+      <button class="minus" aria-label="-1">−</button>
+      <span class="value">0</span>
+      <span class="label">Кави</span>
+      <button class="plus" aria-label="+1">+</button>
+    </div>
+    <div class="counter" data-name="чаю">
+      <button class="minus" aria-label="-1">−</button>
+      <span class="value">0</span>
+      <span class="label">Чаю</span>
+      <button class="plus" aria-label="+1">+</button>
+    </div>
+    <div class="counter" data-name="води">
+      <button class="minus" aria-label="-1">−</button>
+      <span class="value">0</span>
+      <span class="label">Води</span>
+      <button class="plus" aria-label="+1">+</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <p>Всього: <strong id="total">0</strong> · Лідер: <strong id="leader">—</strong></p>
+    <button id="undo">Скасувати останнє</button>
+    <button id="reset">Скинути все</button>
+    <button id="export">Експорт у JSON</button>
+  </div>
+
+  <p>Останні дії:</p>
+  <ul id="history"></ul>
+
+  <script src="counter.js"></script>
+</body>
+</html>
